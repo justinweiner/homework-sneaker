@@ -1,0 +1,22 @@
+.shoplinks {
+	.shop {
+		margin: 20px 0;
+		padding: 20px;
+		background: $ghost;
+
+		button {
+			background: $blueprint;
+			padding: 10px 20px;
+			border: none;
+
+			&:hover {
+				background: darken($blueprint, 20%);
+			}
+		}
+	}
+
+	@include lg {
+		width: 75%;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,59 @@
+.articles {
+	@include md {
+		width: 75%;
+		margin: 30px auto;
+	}
+
+	li {
+		background: $ghost;
+
+		.articles-content {
+			padding: 0 30px 30px;
+		}
+
+		button {
+			background: $blueprint;
+			border: none;
+			padding: 5px 10px;
+		}
+	}
+}
+
+.articles-image {
+	height: 180px;
+}
+
+#article-1 {
+	.articles-image {
+		background: url("/deploy/img/AJ1.jpeg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#article-2 {
+	.articles-image {
+		background: url("/deploy/img/newbalance.jpeg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#article-3 {
+	.articles-image {
+		background: url("/deploy/img/AF1easter.jpg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#article-4 {
+	.articles-image {
+		background: url("/deploy/img/yeezy.jpg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#article-5 {
+	.articles-image {
+		background: url("/deploy/img/Converse.jpeg") no-repeat;
+		background-size: cover;
+	}
+}

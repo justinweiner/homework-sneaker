@@ -1,0 +1,32 @@
+.subhero {
+	width: 100%;
+
+	.image {
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.sneaker {
+		background-image: url("/deploy/img/Herosneaker.jpeg");
+		height: 500px;
+		width: 100%;
+	}
+	.pose {
+		background-image: url("/deploy/img/aside-heroclothing.jpg");
+		// height: 700px;
+		width: 100%;
+	}
+
+	.clothingrack {
+		background-image: url("/deploy/img/Heroclothing2.jpeg");
+		height: 500px;
+		width: 100%;
+		display: none;
+	}
+
+	@include md {
+		.image {
+			// height: 700px;
+		}
+	}
+}
