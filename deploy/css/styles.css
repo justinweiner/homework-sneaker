@@ -566,7 +566,7 @@ header {
 .footer .newsletter button {
   padding: 5px 10px;
   border: none;
-  background: #FE5F55;
+  background: #577399;
 }
 .footer .social-icon a {
   color: #BDD5EA;
@@ -624,3 +624,93 @@ header {
   }
 }
 
+.shoplinks .shop {
+  margin: 20px 0;
+  padding: 20px;
+  background: #E9E9F0;
+}
+.shoplinks .shop button {
+  background: #577399;
+  padding: 10px 20px;
+  border: none;
+}
+.shoplinks .shop button:hover {
+  background: #405572;
+}
+@media (min-width: 1024px) {
+  .shoplinks {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+
+.subhero {
+  width: 100%;
+}
+.subhero .image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subhero .sneaker {
+  background-image: url("/deploy/img/Herosneaker.jpeg");
+  height: 500px;
+  width: 100%;
+}
+.subhero .pose {
+  background-image: url("/deploy/img/aside-heroclothing.jpg");
+  width: 100%;
+}
+.subhero .clothingrack {
+  background-image: url("/deploy/img/Heroclothing2.jpeg");
+  height: 500px;
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .articles {
+    width: 75%;
+    margin: 30px auto;
+  }
+}
+.articles li {
+  background: #E9E9F0;
+}
+.articles li .articles-content {
+  padding: 0 30px 30px;
+}
+.articles li button {
+  background: #577399;
+  border: none;
+  padding: 5px 10px;
+}
+
+.articles-image {
+  height: 180px;
+}
+
+#article-1 .articles-image {
+  background: url("/deploy/img/AJ1.jpeg") no-repeat;
+  background-size: cover;
+}
+
+#article-2 .articles-image {
+  background: url("/deploy/img/newbalance.jpeg") no-repeat;
+  background-size: cover;
+}
+
+#article-3 .articles-image {
+  background: url("/deploy/img/AF1easter.jpg") no-repeat;
+  background-size: cover;
+}
+
+#article-4 .articles-image {
+  background: url("/deploy/img/yeezy.jpg") no-repeat;
+  background-size: cover;
+}
+
+#article-5 .articles-image {
+  background: url("/deploy/img/Converse.jpeg") no-repeat;
+  background-size: cover;
+}

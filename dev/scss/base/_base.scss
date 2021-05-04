@@ -27,12 +27,18 @@ main {
     "footer";
 }
 
-    .header {
+.header {
         grid-area: header;
     }
 
     .search {
         grid-area: search;
+
+        form {
+            display: grid;
+            grid-template-columns: 85% auto;
+            grid-gap: 20px;
+        }
     }
 
     .hero {
@@ -48,23 +54,25 @@ main {
     
         a {
             display: grid;
+            grid-template-columns: 90% auto;
+            align-items: center;
         }
     
         @include md {
             ul {
-                grid-template-columns: repeat(12, 1fr);
+                grid-template-columns: repeat(6, 1fr);
     
                 .herosneaker {
-                    grid-column: span 5;
+                    grid-column: span 3;
                 }
                 .info {
-                    grid-column: span 7;
+                    grid-column: span 3;
                 }
             }
         }
-    }
+}
 
-    .shoplinks {
+.shoplinks {
         grid-area: shoplinks;
 
         ul {
@@ -73,17 +81,20 @@ main {
 
         .shop {
             display: grid;
-            grid-template-columns: 400px auto;
+            grid-template-columns: 70% auto;
         }
         @include md {
+            .shop {
+                grid-template-columns: 70% auto;
+            }
             ul {
-                grid-template-columns: repeat(12, 1fr);
+                grid-template-columns: 50% auto;
                 grid-gap: 20px;
             }
         }
-    }
+}
 
-    .subhero {
+.subhero {
         grid-area: subhero;
         ul {
             display: grid;
@@ -108,10 +119,10 @@ main {
 		.clothingrack {
 			grid-area: clothingrack;
 		}
-        }
     }
+}
 
-    .articles {
+ .articles {
         grid-area: articles;
         ul {
             display: grid;
@@ -119,7 +130,7 @@ main {
     
         @include md {
             ul {
-                grid-template-columns: 350px 350px;
+                grid-template-columns: repeat(4, 1fr);
                 grid-gap: 30px;
                 justify-content: center;
                 grid-template-areas:
@@ -153,9 +164,9 @@ main {
 				". article-4 article-4 article-5 article-5 .";
             }
         }
-    }
+ }
 
-    .footer {
+.footer {
         grid-area: footer;
 
         .socials ul{
@@ -170,8 +181,7 @@ main {
     
         @include md {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             grid-gap: 50px;
     
             .locations {
@@ -187,5 +197,8 @@ main {
             .socials {
                 grid-column: 5 / 6;
             }
+        }
+        @include lg {
+            grid-template-areas: ". locations . newsletter . socials";
         }
     }
