@@ -434,21 +434,33 @@ main {
 }
 .subhero ul {
   display: grid;
+  grid-template-rows: 360px 480px;
 }
 @media (min-width: 768px) {
   .subhero ul {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "sneaker sneaker pose pose" "sneaker sneaker pose pose" "sneaker sneaker pose pose";
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 200px);
   }
   .subhero .sneaker {
-    grid-area: sneaker;
+    grid-column: 1/5;
+    grid-row: 1/5;
   }
   .subhero .pose {
-    grid-area: pose;
+    grid-column: auto/span 3;
+    grid-row: 1/5;
   }
-  .subhero .clothingrack {
-    grid-area: clothingrack;
+}
+@media (min-width: 1200px) {
+  .subhero ul .sneaker {
+    grid-column: 1/5;
+  }
+  .subhero ul .pose {
+    grid-column: auto/span 3;
+    grid-row: 1/3;
+  }
+  .subhero ul .clothingrack {
+    grid-column: auto/span 3;
+    grid-row: auto/span 2;
   }
 }
 
@@ -462,7 +474,6 @@ main {
   .articles ul {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    justify-content: center;
     grid-template-areas: "article-1 article-1 article-2 article-2" "article-3 article-3 article-4 article-4" ". article-5 article-5 .";
   }
   .articles #article-1 {
@@ -524,6 +535,10 @@ main {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* =============
     Buttons
 ============= */
@@ -540,6 +555,7 @@ header {
   background: #2a3036;
   padding: 10px;
 }
+
 /* =============
     Footer
 ============= */
@@ -547,18 +563,36 @@ header {
   background: #2a3036;
   padding: 50px 0;
 }
+.footer address {
+  line-height: 1.5;
+  border-bottom: 1px solid #bdd5ea;
+  padding-bottom: 20px;
+}
 .footer .address a {
+  font-size: 0.75rem;
+  text-decoration: none;
   color: #BDD5EA;
+}
+.footer .address:last-child {
+  border: none;
 }
 .footer h1,
 .footer h2 {
   color: #BDD5EA;
+  font-weight: 400;
+}
+.footer h1 {
+  font-size: 1.25rem;
+}
+.footer h2 {
+  font-size: 1rem;
 }
 .footer .icon {
   color: #FE5F55;
 }
 .footer address {
-  color: #BDD5EA;
+  color: #FE5F55;
+  font-size: 0.75rem;
 }
 .footer .newsletter form input {
   padding: 20px;
@@ -569,8 +603,12 @@ header {
   background: #577399;
 }
 .footer .social-icon a {
+  font-size: 26px;
   color: #BDD5EA;
   padding: 0 5px 0 0;
+}
+.footer .social-icon a:hover {
+  color: #9EB3C5;
 }
 
 .search {
@@ -578,6 +616,7 @@ header {
   margin: 30px 10px 0;
 }
 .search form input {
+  font-size: 1rem;
   border: none;
   border-bottom: 1px solid #62768A;
   padding: 5px;
@@ -588,15 +627,23 @@ header {
   border-radius: 4px;
   height: 50px;
 }
+@media (min-width: 768px) {
+  .search form input {
+    font-size: 2.1875rem;
+  }
+}
 
 .hero-img {
   background: url("../../../deploy/img/HeroAF1.jpg");
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 50vh;
   width: 100%;
 }
 
+.hero ul a {
+  text-decoration: none;
+}
 .hero ul .details h5 {
   display: none;
 }
@@ -614,20 +661,22 @@ header {
 .hero ul .location a {
   background: #9EB3C5;
 }
+.hero ul .location a .bold {
+  font-weight: 600;
+}
 .hero ul .location a:hover {
   background: #9EB3C5;
-}
-@media (min-width: 768px) {
-  .hero ul .details h5 {
-    display: inline;
-    padding: 10px;
-  }
 }
 
 .shoplinks .shop {
   margin: 20px 0;
   padding: 20px;
   background: #E9E9F0;
+}
+.shoplinks .shop h1 {
+  color: #2a3036;
+  font-weight: 400;
+  font-size: 2.1875rem;
 }
 .shoplinks .shop button {
   background: #577399;
@@ -644,35 +693,33 @@ header {
   }
 }
 
-
 .subhero {
   width: 100%;
 }
 .subhero .image {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .subhero .sneaker {
   background-image: url("/deploy/img/Herosneaker.jpeg");
-  height: 500px;
-  width: 100%;
 }
 .subhero .pose {
   background-image: url("/deploy/img/aside-heroclothing.jpg");
-  width: 100%;
 }
 .subhero .clothingrack {
   background-image: url("/deploy/img/Heroclothing2.jpeg");
-  height: 500px;
-  width: 100%;
   display: none;
 }
-
-@media (min-width: 768px) {
-  .articles {
-    width: 75%;
-    margin: 30px auto;
+@media (min-width: 1200px) {
+  .subhero .clothingrack {
+    display: inline;
   }
+}
+
+.articles h1 {
+  font-weight: 400;
+  font-size: 1.6875rem;
 }
 .articles li {
   background: #E9E9F0;
@@ -684,6 +731,16 @@ header {
   background: #577399;
   border: none;
   padding: 5px 10px;
+}
+.articles li p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .articles {
+    width: 75%;
+    margin: 30px auto;
+  }
 }
 
 .articles-image {
